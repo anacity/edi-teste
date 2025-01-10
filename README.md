@@ -7,7 +7,7 @@ A aplicação foi desenvolvida em Java utilizando o framework Spring Boot para p
 
 - **com.example.leitor.controller**: Controladores que lidam com as requisições HTTP.
 - **com.example.leitor.model**: Modelos de dados utilizados na aplicação.
-- **com.example.leitor**: Classes responsáveis por processar os arquivos PE1 e PE3.
+- **com.example.leitor**: Classes responsáveis por processar os seguimentos PE1 e PE3.
 ### Principais Componentes
 
 ### 1. **ArquivoController**
