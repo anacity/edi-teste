@@ -57,9 +57,9 @@ public class Pedido {
         return "Pedido{" +
                 "dataEmissaoProgramaAtual='" + dataEmissaoProgramaAtual + '\'' +
                 ", codigoItemCliente='" + codigoItemCliente + '\'' +
-                ", nPedidoCompra='" + nPedidoCompra + '\'' +  // Adiciona o nPedidoCompra aqui
+                ", nPedidoCompra='" + nPedidoCompra + '\'' +  
                 ", itens=" + itens +
-                '}';
+                '}'; // formatação para o JSON
     }
 
 }
