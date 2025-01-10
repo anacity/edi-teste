@@ -46,7 +46,7 @@ public class PE3 extends Sessao {
             posicao += 17;
         }
 
-        // Log the number of items extracted
+        // Mostra o número de itens extraidos
         System.out.println("Extracted " + datasEntrega.size() + " delivery dates, " +
                            horasEntrega.size() + " delivery hours, and " +
                            quantidadesEntrega.size() + " quantities from PE3.");
@@ -54,8 +54,6 @@ public class PE3 extends Sessao {
 
     @Override
     public Map<String, Object> processarConteudo() {
-        // No need to create a new Pedido here
-        // Just return the items
         List<ItemPedido> itens = new ArrayList<>();
         for (int i = 0; i < datasEntrega.size(); i++) {
             String dataFormatada = converterData(datasEntrega.get(i));
@@ -63,7 +61,7 @@ public class PE3 extends Sessao {
             itens.add(item);
         }
 
-        // Return the items instead of creating a new Pedido
+        // Retorna os itens invés de criar um novo Pedido
         Map<String, Object> resultado = new HashMap<>();
         resultado.put("itens", itens);
         return resultado;
