@@ -11,13 +11,11 @@ public class PE1 extends Sessao {
     private String dataEmissaoProgramaAtual;
     private String nPedidoCompra;
     private String codigoItemCliente;
-    private int casasDecimais; // Novo campo para armazenar o número de casas decimais
+    private int casasDecimais;
 
     public PE1(String conteudo, String nCasaDecimal) {
         super(conteudo);
-        // Aqui você deve extrair o número de casas decimais do conteúdo
-        // Supondo que o número de casas decimais está em uma posição específica, ex: posição 20 até 21
-        this.casasDecimais = Integer.parseInt(conteudo.substring(126, 127).trim());  // Ajuste conforme a posição exata no seu arquivo
+        this.casasDecimais = Integer.parseInt(conteudo.substring(126, 127).trim()); 
     }
 
     @Override
