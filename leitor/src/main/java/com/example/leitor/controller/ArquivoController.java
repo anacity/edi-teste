@@ -57,7 +57,7 @@ public class ArquivoController {
 	        }
 
 	        // Processa o PE1
-	        int fimSessaoPE1 = posPE1 + 128;  // Ajuste conforme a estrutura do seu arquivo
+	        int fimSessaoPE1 = posPE1 + 128;  // Segmento acaba após 128 caracteres
 	        if (fimSessaoPE1 > texto.length()) fimSessaoPE1 = texto.length();
 	        String conteudoPE1 = texto.substring(posPE1, fimSessaoPE1).trim();
 	        PE1 pe1 = new PE1(conteudoPE1, "PE1");
@@ -68,7 +68,7 @@ public class ArquivoController {
 	        // Agora procuramos o PE3 correspondente a esse pedido, imediatamente após o PE1
 	        int posPE3 = texto.indexOf("PE3", fimSessaoPE1);
 	        if (posPE3 != -1) {
-	            int fimSessaoPE3 = posPE3 + 128;  // Ajuste conforme a estrutura do seu arquivo
+	            int fimSessaoPE3 = posPE3 + 128;  // Segmento acaba após 128 caracteres
 	            if (fimSessaoPE3 > texto.length()) fimSessaoPE3 = texto.length();
 	            String conteudoPE3 = texto.substring(posPE3, fimSessaoPE3).trim();
 	            PE3 pe3 = new PE3(conteudoPE3, pe1);
